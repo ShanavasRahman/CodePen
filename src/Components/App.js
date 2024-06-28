@@ -8,7 +8,7 @@ function App() {
   const [srcDoc, setSrcDoc] = useState('');
 
   useEffect(() => {
-    setTimeout(() => {
+  const timeOut=  setTimeout(() => {
       setSrcDoc(`
       <html>
       <body>
@@ -18,8 +18,10 @@ function App() {
       <script>${js}</script>
       </html>
   `)
-    }, 250);
-  })
+  }, 250);
+    
+    return ()=> clearTimeout(timeOut);
+  }, [html, css, js]);
 
 
   return (
@@ -28,19 +30,19 @@ function App() {
         <Editor
           displayName="HTML"
           value={html}
-          onChange={setHtml}
+          onChangeHandler={setHtml}
           language="xml"
         />
         <Editor
           displayName="Css"
           value={css}
-          onChange={setCss}
+          onChangeHandler={setCss}
           language="css"
         />
         <Editor
           displayName="JavaScript"
           value={js}
-          onChange={setJs}
+          onChangeHandler={setJs}
           language="javascript"
         />
       </div>
