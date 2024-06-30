@@ -51,7 +51,7 @@ function App() {
         <iframe
           srcDoc={srcDoc}
           title="output"
-          sandbox="allow-script"
+          sandbox="allow-scripts"
           width="100%"
           height="100%"
           frameborder="0"
