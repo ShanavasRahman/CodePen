@@ -1,11 +1,5 @@
-/* General Styles */
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  overflow: hidden;
 }
 
 .top-pane {
@@ -15,7 +9,6 @@ body {
 .pane {
   height: 50vh;
   display: flex;
-  flex-direction: column;
 }
 
 .editor-container {
@@ -63,68 +56,4 @@ body {
   border-bottom-right-radius: .5rem;
   border-bottom-left-radius: .5rem;
   overflow: hidden;
-}
-
-/* Media Queries for Responsiveness */
-
-/* Tablets and above */
-@media (min-width: 768px) {
-  .pane {
-    flex-direction: row;
-    height: 50vh;
-  }
-}
-
-/* Mobile devices */
-@media (max-width: 767px) {
-  body {
-    height: auto;
-    overflow: auto;
-  }
-
-  .pane {
-    flex-direction: column;
-    height: auto;
-  }
-
-  .editor-container {
-    padding: .25rem;
-  }
-
-  .editor-title {
-    padding: .25rem;
-    font-size: 0.9rem;
-  }
-
-  .expand-collapse-btn {
-    margin-left: .25rem;
-    font-size: 0.8rem;
-  }
-}
-
-/* Small mobile devices */
-@media (max-width: 480px) {
-  body {
-    height: auto;
-    overflow: auto;
-  }
-
-  .pane {
-    flex-direction: column;
-    height: auto;
-  }
-
-  .editor-container {
-    padding: .1rem;
-  }
-
-  .editor-title {
-    padding: .1rem;
-    font-size: 0.8rem;
-  }
-
-  .expand-collapse-btn {
-    margin-left: .1rem;
-    font-size: 0.7rem;
-  }
 }
